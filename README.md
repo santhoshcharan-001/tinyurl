@@ -11,7 +11,7 @@ Setup:
 2) Download and Install Django 3.2.5
 3) Download and Install Git
 4) Fork the Repository
-5) Clone the Repository to your local machine, # $ git clone https://github.com/<your-github-username>/tinyurl.git
+5) Clone the Repository to your local machine.
 6) Change the directory to tinyurl, $ cd tinyurl
 7) Install virtualenv $ pip install virtualenv
 8) Create a virtual environment $ virtualenv myenv
