@@ -17,16 +17,6 @@
         padding: 0;
         box-sizing: border-box;
       }
-      .error {
-        position: absolute;
-        display: flex;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-      }
     </style>
     <title>Error 404</title>
   </head>
@@ -36,7 +26,7 @@
         src="{% static 'images/error.json' %}"
         background="transparent"
         speed="0.85"
-        style="width: 100%; height: 100%"
+        style="width: 100%; height: 100vh"
         loop
         autoplay
       ></lottie-player>
