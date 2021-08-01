@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="icon"
+      href="{% static 'images/basic_image.jpeg'%}"
+      type="image/x-icon"
+    />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      type="text/javascript"
+    ></script>
+
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URLSHORTENER</title>
+  </head>
+  <body>
+    <div class="before-load">
+      <lottie-player
+        src="{% static 'images/loading.json' %}"
+        background="transparent"
+        speed="0.85"
+        style="width: 300px; height: 300px"
+        loop
+        autoplay
+      ></lottie-player>
+    </div>
+    <div class="main">
+      <div class="works">
+        <div class="image-holder">
+          <img src="{% static 'images/basic_image.jpeg'%}" alt="" />
+        </div>
+
+        <form action="/tiny/shortit/" method="post" class="only_form">
+          <div class="work">
+            {% csrf_token %}
+            <div class="key">
+              <label for="normal_url">Please Enter Your URL:</label>
+            </div>
+            <div class="value">
+              <input
+                type="url"
+                name="normal_url"
+                id="normal_url"
+                placeholder="https://www.example.com"
+                required
+              />
+            </div>
+          </div>
+          <div class="button_work">
+            <div class="submit">
+              <button type="submit">ShortIt</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="shorted-url-data hide">
+      <div class="link">
+        <input class="given_response" id="given_response" />
+      </div>
+      <div class="copy" onclick="copy_text()">
+        <img src="{% static 'images/copy.svg'%}" alt="" />
+      </div>
+    </div>
+    <script src="{% static 'javascript/home.js'%}"></script>
+  </body>
+</html>

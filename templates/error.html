@@ -1,0 +1,45 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="icon"
+      href="{% static 'images/basic_image.jpeg'%}"
+      type="image/x-icon"
+    />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .error {
+        position: absolute;
+        display: flex;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+    <title>Error 404</title>
+  </head>
+  <body>
+    <div class="error">
+      <lottie-player
+        src="{% static 'images/error.json' %}"
+        background="transparent"
+        speed="0.85"
+        style="width: 100%; height: 100%"
+        loop
+        autoplay
+      ></lottie-player>
+    </div>
+  </body>
+</html>
